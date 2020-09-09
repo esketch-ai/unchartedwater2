@@ -1,0 +1,246 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.view {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.game {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+}
+
+.game canvas {
+    width: 100%;
+    image-rendering: auto !important;
+  }
+
+.game .canvas {
+    width: 100%;
+    background: #333;
+    height: 0;
+    padding-top: 66.66666%
+  }
+
+.game .event-blocker {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+.dosbox-container {
+  width: 100%;
+  max-width: 720px;
+}
+
+.controller {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  margin-top: -16px;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  align-items: stretch;
+}
+
+.controller .container {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+
+.controller .keyboard {
+    display: flex;
+  }
+
+.controller .keyboard .line {
+      display: flex;
+    }
+
+.controller .keyboard .key {
+      position: relative;
+      box-sizing: border-box;
+      margin: 2px;
+      border-radius: 8px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid #aaa;
+      color: #aaa;
+      background: rgba(255, 255, 255, .03125);
+    }
+
+.controller .keyboard .key:hover {
+        cursor: pointer;
+        background: rgba(255, 255, 255, .125);
+      }
+
+.controller .keyboard .key.active,
+      .controller .keyboard .key:active {
+        background: rgba(255, 255, 255, .25);
+      }
+
+.controller .keyboard .label {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      font-size: 12px;
+    }
+
+.controller .keyboard .description {
+      display: none;
+    }
+
+.controller .keyboard .description {
+      position: absolute;
+      bottom: 6px;
+      left: 6px;
+      font-size: 10px;
+    }
+
+.controller .keyboard .key-enter {
+      height: 140px;
+    }
+
+.controller .joystick {
+    flex: 1 1 auto;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    background: rgba(255, 255, 255, .0625);
+    border-radius: 8px;
+  }
+
+.controller .joystick .label {
+      font-size: 40px;
+      text-align: center;
+      color: rgba(255, 255, 255, .125);
+    }
+
+.message {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background: rgba(255, 255, 255, .75);
+  pointer-events: none;
+}
+
+.fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.version {
+  pointer-events: none;
+  position: absolute;
+  right: 6px;
+  bottom: 4px;
+  color: #333;
+  font-size: 14px;
+}
+
+.github {
+  position: absolute;
+  display: flex;
+  right: 6px;
+  top: 4px;
+  color: #777;
+  font-size: 12px;
+  align-items: center;
+}
+
+.github svg {
+    width: 14px;
+    fill: #777;
+  }
+
+.github span {
+    margin-left: 4px;
+  }
+
+@media (min-width: 576px) {
+    .controller .container {
+      max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .controller .container {
+      max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .controller .container {
+      max-width: 960px;
+    }
+      .controller .keyboard .key {
+        width: 60px;
+        height: 60px;
+      }
+        .controller .keyboard .key .label {
+          font-size: 16px;
+        }
+        .controller .keyboard .key .description {
+          display: block;
+        }
+      .controller .keyboard .key-enter {
+        height: 188px;
+      }
+}
+
+@media (min-width: 1200px) {
+    .controller .container {
+      max-width: 1140px;
+    }
+}
+
+@media (orientation: landscape) {
+  .controller {
+    position: absolute;
+    flex: none;
+    margin-top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+    .controller .container {
+      flex-flow: row;
+      align-items: stretch;
+    }
+}
+
+
+/*# sourceMappingURL=main_cf8e3f7207c03e34a9f6.css.map*/
